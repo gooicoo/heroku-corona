@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <h1>CoronaPaco web</h1>
+    <h1>Gooicoo web</h1>
 
 
 
