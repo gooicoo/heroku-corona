@@ -16,8 +16,6 @@
 
 
     <?php
-    session_start();
-
     $dbopts = getenv('DATABASE_URL');
     // Conectando y seleccionado la base de datos
     $dbconn = pg_connect($dbopts)
@@ -25,7 +23,7 @@
 
     echo 'CONNECTAT!';
 
-    if isset($_POST['user']){
+    if ( isset($_POST['user']) ){
         $user = $_POST['user'];
         $pass = $_POST['pass'];
 
