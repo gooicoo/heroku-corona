@@ -21,7 +21,6 @@
     $dbconn = pg_connect($dbopts)
         or die('No se ha podido conectar: ' . pg_last_error());
 
-    echo 'CONNECTAT!';
 
     if ( isset($_POST['user']) and isset($_POST['pass']) ){
         $user = $_POST['user'];
