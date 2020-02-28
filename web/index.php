@@ -9,9 +9,9 @@
     <h1>Gooicoo web</h1>
 
     <?php
-    $dbopts = (getenv('DATABASE_URL'));
+    $dbopts = getenv('DATABASE_URL');
     // Conectando y seleccionado la base de datos
-    $dbconn = pg_connect("host=localhost dbname=publishing user=www password=foo")
+    $dbconn = pg_connect($dbopts)
         or die('No se ha podido conectar: ' . pg_last_error());
 
     echo 'CONNECTAT!';
