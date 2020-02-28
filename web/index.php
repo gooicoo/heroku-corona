@@ -23,11 +23,11 @@
 
     echo 'CONNECTAT!';
 
-    if ( isset($_POST['user']) ){
+    if ( isset($_POST['user']) and isset($_POST['pass']) ){
         $user = $_POST['user'];
         $pass = $_POST['pass'];
 
-        $sql = pg_query( "select * from usuaris where nom='{$user}' ;" );
+        $sql = pg_query( "select * from usuaris where nom='{$user}' and password='{$pass}' ;" );
 
         if ( pg_num_rows($sql) > 0 ) {
             echo 'Estas dentro';
